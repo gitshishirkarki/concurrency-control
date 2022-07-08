@@ -14,8 +14,8 @@ public class SuiteService {
     @Autowired
     private SuiteRepository suiteRepository;
 
-    public Optional<Suite> findOne(Long id) {
-        return suiteRepository.findById(id);
+    public Optional<Suite> findOne(Long id, Integer version) {
+        return suiteRepository.findByIdAndVersion(id, version);
     }
 
     public List<Suite> findAllAvailableSuites() {
@@ -23,14 +23,14 @@ public class SuiteService {
     }
 
     @Transactional
-    public Suite bookSuite(Long id, String user) {
-        Optional<Suite> suiteOptional = findOne(id);
+    public Suite bookSuite(Long id, Suite suite) {
+        Optional<Suite> suiteOptional = findOne(id, suite.getVersion());
         if (suiteOptional.isPresent()) {
-            Suite suite = suiteOptional.get();
-            suite.setStatus("BOOKED");
-            suite.setBookedBy(user);
+            Suite availableSuite = suiteOptional.get();
+            availableSuite.setStatus("BOOKED");
+            availableSuite.setBookedBy(suite.getBookedBy());
 
-            return suiteRepository.save(suite);
+            return suiteRepository.save(availableSuite);
         }
         return null;
     }

@@ -25,13 +25,16 @@ gradle bootRun
 The details about the specific problem scenario and brain-storming details are available as PDF under resources folder. Also, you can click [THIS LINK](https://github.com/gitshishirkarki/concurrency-control/blob/main/src/main/resources/spring-boot-optimistic-locking.pdf) to redirect to the document.
 
 ## Unit Test
-Unit test for ObjectOptimisticLockingFailureException is available in com.shishir.concurrency.service.SuiteServiceTest class.
+Unit test for ObjectOptimisticLockingFailureException is available in com.shishir.concurrency.service.OptimisticLockingTest class.
 
 ## API Details
 ### GET Available Suites
 URL : localhost:8080/api/v1/suites
+
 Method: GET
+
 Response Payload:
+
 ```shell script
 [
     {
@@ -45,8 +48,18 @@ Response Payload:
 ```
 
 ### Make a booking
-URL: localhost:8080/api/v1/suites/{id}/{user}
+URL: localhost:8080/api/v1/suites/{id}/bookings
+
 Method: PUT
+
+Request Payload: 
+```shell script
+{
+    "version":1,
+    "user":"shishir"
+}
+```
+
 Response Payload: 
 ```shell script
 {

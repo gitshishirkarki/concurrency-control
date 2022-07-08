@@ -20,11 +20,14 @@ public class SuiteController {
         return new ResponseEntity<>(suiteService.findAllAvailableSuites(), HttpStatus.OK);
     }
 
-    @PutMapping("/{id}/{user}")
-    public ResponseEntity<Suite> bookSuite(@PathVariable(name = "id", required = true) Long id, @PathVariable(name = "user", required = true) String user) {
-        Suite suite = suiteService.bookSuite(id, user);
-        if (null != suite) {
-            return new ResponseEntity<>(suite, HttpStatus.OK);
+    @PutMapping("/{id}/bookings")
+    public ResponseEntity<Suite> bookSuite(@PathVariable(name = "id", required = true) Long id, @RequestBody SuiteBookingDto request) {
+        Suite suite = new Suite();
+        suite.setVersion(request.getVersion());
+        suite.setBookedBy(request.getUser());
+        Suite updatedSuite = suiteService.bookSuite(id, suite);
+        if (null != updatedSuite) {
+            return new ResponseEntity<>(updatedSuite, HttpStatus.OK);
         }
         return new ResponseEntity<>(new Suite(), HttpStatus.NOT_ACCEPTABLE);
     }
