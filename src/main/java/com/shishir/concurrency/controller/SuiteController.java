@@ -1,6 +1,6 @@
 package com.shishir.concurrency.controller;
 
-import com.shishir.concurrency.SuiteService;
+import com.shishir.concurrency.service.SuiteService;
 import com.shishir.concurrency.entities.Suite;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

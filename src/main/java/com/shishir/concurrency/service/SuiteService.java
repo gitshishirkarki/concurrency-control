@@ -1,4 +1,4 @@
-package com.shishir.concurrency;
+package com.shishir.concurrency.service;
 
 import com.shishir.concurrency.entities.Suite;
 import com.shishir.concurrency.repository.SuiteRepository;
