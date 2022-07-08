@@ -2,6 +2,7 @@ package com.shishir.concurrency.service;
 
 import com.shishir.concurrency.entities.Suite;
 import com.shishir.concurrency.repository.SuiteRepository;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
