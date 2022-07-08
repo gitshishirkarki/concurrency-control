@@ -21,6 +21,19 @@ Alternatively you can use the [Spring Boot Gradle Plugin](https://docs.spring.io
 ```shell
 gradle bootRun
 ```
+
+### MySQL configuration 
+MySQL configuration can be found in application.properties as
+
+```shell script
+spring.datasource.url=jdbc:mysql://localhost:3306/concurrencyDB?useSSL=false&createDatabaseIfNotExist=true
+spring.datasource.username=root
+spring.datasource.password=admin
+```
+
+Here, database name used is concurrencyDB with username as 'root' and password as 'admin'. 
+
+Note that the database will be created from the system if not found.
 ## Problem scenario and brain-storming
 The details about the specific problem scenario and brain-storming details are available as PDF under resources folder. Also, you can click [THIS LINK](https://github.com/gitshishirkarki/concurrency-control/blob/main/src/main/resources/spring-boot-optimistic-locking.pdf) to redirect to the document.
 
