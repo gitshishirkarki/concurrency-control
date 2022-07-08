@@ -21,6 +21,9 @@ Alternatively you can use the [Spring Boot Gradle Plugin](https://docs.spring.io
 ```shell
 gradle bootRun
 ```
+## Problem scenario and brain-storming
+The details about the specific problem scenario and brain-storming details are available as PDF under resources folder. Also, you can click (THIS LINK)[https://github.com/gitshishirkarki/concurrency-control/blob/main/src/main/resources/spring-boot-optimistic-locking.pdf] to redirect to the document.
+
 ## Unit Test
 Unit test for ObjectOptimisticLockingFailureException is available in com.shishir.concurrency.service.SuiteServiceTest class.
 ## API Details
