@@ -24,5 +24,12 @@ public class MainApplication {
 		suite.setName("Presidential Suite");
 
 		suiteRepository.save(suite);
+
+		Suite suite1 = new Suite();
+		suite1.setStatus("BOOKED");
+		suite1.setName("Presidential Suite");
+		suite1.setBookedBy("someuser");
+
+		suiteRepository.save(suite1);
 	}
 }
