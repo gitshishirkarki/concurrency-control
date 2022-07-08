@@ -20,12 +20,12 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 
 	runtimeOnly 'mysql:mysql-connector-java'
-	compileOnly 'org.hibernate:hibernate-envers:5.4.25.Final'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
