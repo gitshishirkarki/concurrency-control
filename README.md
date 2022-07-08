@@ -21,7 +21,8 @@ Alternatively you can use the [Spring Boot Gradle Plugin](https://docs.spring.io
 ```shell
 gradle bootRun
 ```
-
+## Unit Test
+Unit test for ObjectOptimisticLockingFailureException is available 
 ## API Details
 ### GET Available Suites
 URL : localhost:8080/api/v1/suites
