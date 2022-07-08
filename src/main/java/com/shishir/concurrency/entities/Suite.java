@@ -16,7 +16,7 @@ public class Suite {
 
     private String name;
 
-    private String status = "AVAILABLE";
+    private String status;
 
     private String bookedBy;
 

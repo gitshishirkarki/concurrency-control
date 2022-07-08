@@ -73,7 +73,10 @@ Request Payload:
 }
 ```
 
-Response Payload: 
+Success Response Payload: 
+
+HttpStatus: 200
+
 ```shell script
 {
     "id": 1,
@@ -81,5 +84,19 @@ Response Payload:
     "status": "BOOKED",
     "bookedBy": "shishir",
     "version": 1
+}
+```
+
+Failure Response Payload: 
+
+HttpStatus: 406
+
+```shell script
+{
+    "id": null,
+    "name": null,
+    "status": null,
+    "bookedBy": null,
+    "version": null
 }
 ```
