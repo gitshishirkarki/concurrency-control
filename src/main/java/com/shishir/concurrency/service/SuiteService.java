@@ -34,4 +34,9 @@ public class SuiteService {
         }
         return null;
     }
+
+    @Transactional
+    public Suite save(Suite suite){
+        return suiteRepository.save(suite);
+    }
 }

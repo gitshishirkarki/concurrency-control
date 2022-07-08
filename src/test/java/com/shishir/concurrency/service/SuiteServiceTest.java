@@ -15,6 +15,8 @@ import java.util.List;
 class SuiteServiceTest {
     @Autowired
     private SuiteRepository suiteRepository;
+    @Autowired
+    private SuiteService suiteService;
 
     @Test
     void bookSuite(){
@@ -33,10 +35,7 @@ class SuiteServiceTest {
         suiteBookFromShishir.setBookedBy("Shishir");
         suiteBookFromShishir.setStatus("BOOKED");
 
-        List<Suite> suites = new ArrayList<>();
-        suites.add(suiteBookFromBinod);
-        suites.add(suiteBookFromShishir);
-
-        suiteRepository.saveAll(suites);
+        suiteService.save(suiteBookFromBinod);
+        suiteService.save(suiteBookFromShishir);
     }
 }
