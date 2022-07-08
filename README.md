@@ -22,7 +22,7 @@ Alternatively you can use the [Spring Boot Gradle Plugin](https://docs.spring.io
 gradle bootRun
 ```
 ## Unit Test
-Unit test for ObjectOptimisticLockingFailureException is available 
+Unit test for ObjectOptimisticLockingFailureException is available in com.shishir.concurrency.service.SuiteServiceTest class.
 ## API Details
 ### GET Available Suites
 URL : localhost:8080/api/v1/suites
